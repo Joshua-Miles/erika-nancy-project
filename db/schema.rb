@@ -38,10 +38,10 @@ ActiveRecord::Schema.define(version: 2018_08_21_200911) do
 
   create_table "products", force: :cascade do |t|
     t.string "name"
-    t.float "price"
-    t.text "description"
     t.integer "seller_id"
     t.integer "inventory_id"
+    t.float "price"
+    t.text "description"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["inventory_id"], name: "index_products_on_inventory_id"
